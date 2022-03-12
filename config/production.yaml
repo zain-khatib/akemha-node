@@ -1,0 +1,15 @@
+jwt:
+  secret: 'this is my JWT SECRET'
+admin:
+  secret: 'Admin'
+firebase:
+  cert: './akemha-e7abd-firebase-adminsdk-lfw2q-b4f1dec0cf.json'
+db:
+  dialect: 'postgres'
+  host: 'ec2-34-200-139-9.compute-1.amazonaws.com'
+  port: 5432
+  username: 'fjpxuhpjsohwvd'
+  password: '689a5166603b597a45d5523df6eef114271bb0b71c061eb893d84f13fa12bddc'
+  database: 'de1cu3dv38dj71'
+
+port: 80

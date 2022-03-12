@@ -1,0 +1,12 @@
+db:
+  dialect: 'postgres'
+  host: 'localhost'
+  port: 5432
+  username: 'akemha_user'
+  password: 'password'
+  database: 'akemha_dev'
+
+port: 80
+
+fileUpload:
+  maxSize: 204800

@@ -1,0 +1,7 @@
+jwt:
+  secret: 'this is my JWT SECRET'
+admin:
+  secret: 'Admin'
+firebase:
+  cert: './akemha-e7abd-firebase-adminsdk-lfw2q-b4f1dec0cf.json'
+apiUrl: 'http://localhost'
