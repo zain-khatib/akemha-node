@@ -9,6 +9,6 @@ export class AppController {
   @IsPublic()
   @Get('/heartbeat')
   getHello(): String {
-    return `Akemha API is up and running on port 80`
+    return `Akemha API is up and running on port ${config.get('port')}`
   }
 }

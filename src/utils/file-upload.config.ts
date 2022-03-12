@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 export const multerOptions = {
   // Enable file size limits
   limits: {
-    fileSize: 204800, // in bytes
+    fileSize: config.get('fileUpload.maxSize'), // in bytes
   },
   // Check the mimetypes to allow for upload
   fileFilter: (req: any, file: any, cb: any) => {

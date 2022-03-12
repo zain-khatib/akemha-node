@@ -3,7 +3,7 @@ import * as config from 'config';
 @Injectable()
 export class UtilsService {
   async GetMaxSize() {
-    const size = 204800;
+    const size = config.get('fileUpload.maxSize');
     const units = ['B', 'KB', 'MB', 'GB'];
     let rem = size, unitIdx = 0;
     while ((rem / 1024) > 1) {

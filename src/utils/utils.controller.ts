@@ -26,7 +26,7 @@ export class UtilsController {
   })
   @UseInterceptors(FileInterceptor('image', multerOptions))
   async uploadFile(@UploadedFile() image: Express.Multer.File) {
-    return { url: `https:/akemha.herokuapp.com/${image.filename}` };
+    return { url: `${config.get('apiUrl')}/${image.filename}` };
   }
 
   @Get('max-size')

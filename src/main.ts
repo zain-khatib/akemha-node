@@ -10,7 +10,7 @@ import * as admin from 'firebase-admin';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  const firebaseCert = './akemha-e7abd-firebase-adminsdk-lfw2q-b4f1dec0cf.json';
+  const firebaseCert = config.get('firebase.cert');
   admin.initializeApp({
     credential: admin.credential.cert(firebaseCert)
   })
@@ -29,6 +29,6 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalInterceptors(new LanguageValidation);
   app.useGlobalInterceptors(new LangaugeSetter);
-  await app.listen(process.env.PORT || 80);
+  await app.listen(config.get('port') || 3000);
 }
 bootstrap();

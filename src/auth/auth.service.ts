@@ -14,7 +14,7 @@ export class AuthService {
     private readonly jwtSerivce: JwtService,
   ) { }
   async register(UserRegisterDto: UserRegisterDto) {
-    const role = UserRegisterDto.adminSecret === 'Admin' ? Role.ADMIN : Role.CUSTOMER;
+    const role = UserRegisterDto.adminSecret === config.get('admin.secret') ? Role.ADMIN : Role.CUSTOMER;
     const user = await this.userService.createOne({ ...UserRegisterDto, role });
     const token = await this.generateToken(user.id, user.role);
     return { ...user.get(), token };
